@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_jar" name="Create Jar for Project vxi11">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_jar">
+        <jar destfile="vxi11.jar">
+            <manifest>
+            	
+            	
+            </manifest>
+        	<service type="cn.jos.ic.ICDebugUI" provider="cn.jos.vxi11.Vxi11DebugDialogService"/>
+    	    
+            <fileset dir="bin"/>
+        	<zipfileset excludes="META-INF/*.SF" src="lib/oncrpc.jar"/>
+        	<zipfileset excludes="META-INF/*.SF" src="lib/portmap.jar"/>
+        	
+        </jar>
+    </target>
+</project>
